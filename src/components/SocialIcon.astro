@@ -1,0 +1,39 @@
+---
+interface Props {
+	platform: string;
+	url: string;
+}
+
+const { platform, url } = Astro.props;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer" class="social-icon">
+	{platform === 'facebook' && <i class="fab fa-facebook"></i>}
+	{platform === 'instagram' && <i class="fab fa-instagram"></i>}
+	{platform === 'twitter' && <i class="fab fa-twitter"></i>}
+</a>
+
+<style>
+	.social-icon {
+		background: rgba(255,255,255,0.1);
+		backdrop-filter: blur(10px);
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		text-decoration: none;
+		transition: transform 0.3s ease, background-color 0.3s ease;
+	}
+
+	.social-icon:hover {
+		transform: scale(1.1);
+		background: rgba(255,255,255,0.2);
+	}
+
+	i {
+		font-size: 1.2rem;
+	}
+</style>

@@ -1,0 +1,163 @@
+---
+interface Props {
+	name: string;
+	price: number;
+	description: string;
+	image: string;
+	index: number;
+}
+
+const { name, price, description, image, index } = Astro.props;
+---
+
+<div class="menu-item glass" data-index={index}>
+	<div class="menu-item-inner">
+		<img src={image} alt={name} />
+		<div class="content">
+			<div class="header">
+				<h4>{name}</h4>
+				<span class="price">${price}</span>
+			</div>
+			<p>{description}</p>
+		</div>
+	</div>
+</div>
+
+<style>
+	.menu-item {
+		overflow: hidden;
+		transition: all 0.5s ease;
+		cursor: pointer;
+	}
+
+	.menu-item.expanded {
+		width: 100%;
+		grid-column: 1 / -1;
+	}
+
+	.menu-item.expanded .menu-item-inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
+	.menu-item.expanded img {
+		height: 400px;
+
+	}
+
+	.menu-item.collapsed {
+		width: 100%;
+		transform: none;
+	}
+
+	.menu-item.in-list {
+		width: calc(100% - 2rem);
+		margin-left: auto;
+		transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+		
+	}
+	.menu-item.in-list  img {
+		display: none;
+	}
+	.menu-item.in-list  p {
+		display: none;
+	}
+	.menu-item.in-list  span {
+		display: none;
+	}
+	.menu-item-inner {
+		height: 100%;
+	}
+
+	img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 0.5rem;
+	}
+
+	.content {
+		padding: 1.5rem;
+	}
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		margin: 0;
+		color: #ffd93d;
+	}
+
+	.price {
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: #ff6b6b;
+	}
+
+	p {
+		margin: 0;
+		font-size: 0.9rem;
+		opacity: 0.8;
+		color: white;
+	}
+
+	@media (max-width: 768px) {
+		.menu-item.expanded {
+			width: 100%;
+		}
+
+		.menu-item.expanded .menu-item-inner {
+			grid-template-columns: 1fr;
+		}
+
+		.menu-item.in-list {
+			width: 100%;
+		}
+	}
+</style>
+
+<script>
+	function setupMenuItemInteraction(containerSelector: string) {
+		const container = document.querySelector(containerSelector);
+		if (!container) return;
+
+		const items = container.querySelectorAll('.menu-item');
+
+		items.forEach(item => {
+			item.addEventListener('click', () => {
+				const currentExpanded = container.querySelector('.expanded');
+				
+				if (currentExpanded === item) return;
+
+				if (currentExpanded) {
+					currentExpanded.classList.remove('expanded');
+					currentExpanded.classList.add('in-list');
+				}
+
+				items.forEach(otherItem => {
+					if (otherItem !== item) {
+						otherItem.classList.add('in-list');
+						otherItem.classList.remove('expanded');
+					}
+				});
+
+				item.classList.remove('in-list');
+				item.classList.add('expanded');
+			});
+		});
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		setupMenuItemInteraction('.menu-platos .menu-grid');
+		setupMenuItemInteraction('.menu-bebidas .menu-grid');
+		setupMenuItemInteraction('.menu-postres .menu-grid');
+		setupMenuItemInteraction('.gallery-grid');
+	});
+</script>
