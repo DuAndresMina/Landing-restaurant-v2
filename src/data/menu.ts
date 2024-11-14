@@ -9,7 +9,7 @@ export const menu = [
 		name: "Hamburguesa con Queso",
 		price: 9.99,
 		description: "Nuestra clásica con queso cheddar derretido",
-		image: "/Landing-restaurant-v2/food/hamburguesaqueso.webp"
+		image: "/food/hamburguesaqueso.webp"
 	},
 	{
 		name: "Hamburguesa BBQ",
