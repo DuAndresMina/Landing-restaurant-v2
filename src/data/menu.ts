@@ -71,42 +71,7 @@ export const menu = [
 		description: "Con abundante pepperoni y queso",
 		image: "/food/pizzape.webp"
 	},
-	{
-		name: "Sandwich de Pollo",
-		price: 9.99,
-		description: "Pollo a la parrilla con lechuga y mayonesa",
-		image: "/food/sanpollo.webp"
-	},
-	{
-		name: "Wrap Vegetal",
-		price: 8.99,
-		description: "Vegetales frescos con hummus",
-		image: "/food/wrap.webp"
-	},
-	{
-		name: "Nachos Supremos",
-		price: 10.99,
-		description: "Con queso, guacamole, jalapeños y crema agria",
-		image: "/food/nachos.webp"
-	},
-	{
-		name: "Salchipapa",
-		price: 10.99,
-		description: "Salchicha, papa, queso, salsas",
-		image: "/food/salchi.webp"
-	},
-	{
-		name: "Papa Rellena",
-		price: 10.99,
-		description: "Papita rellena, arroz, huevo, carne, etc",
-		image: "/food/pp.webp"
-	},
-	{
-		name: "Pescado",
-		price: 10.99,
-		description: "Pecao wacuco",
-		image: "/food/pescao.webp"
-	}
+	
 	
 	
 ];
@@ -116,61 +81,61 @@ export const drinks = [
 		name: "Coca-Cola",
 		price: 2.99,
 		description: "Clásica bebida refrescante",
-		image: "/menu/coke.webp"
+		image: "/drinks/CC.webp"
 	},
 	{
 		name: "Sprite",
 		price: 2.99,
 		description: "Refresco de lima-limón",
-		image: "/menu/sprite.webp"
+		image: "/drinks/Spri.webp"
 	},
 	{
 		name: "Fanta",
 		price: 2.99,
 		description: "Refresco de naranja",
-		image: "/menu/fanta.webp"
+		image: "/drinks/Fan.webp"
 	},
 	{
 		name: "Limonada Natural",
 		price: 3.99,
 		description: "Recién exprimida",
-		image: "/menu/lemonade.webp"
+		image: "/drinks/Limo.webp"
 	},
 	{
 		name: "Té Helado",
 		price: 3.49,
 		description: "Con limón y menta",
-		image: "/menu/ice-tea.webp"
+		image: "/drinks/Te.webp"
 	},
 	{
 		name: "Agua Mineral",
 		price: 1.99,
 		description: "Con o sin gas",
-		image: "/menu/water.webp"
+		image: "/drinks/agua.webp"
 	},
 	{
 		name: "Cerveza",
 		price: 4.99,
 		description: "Variedad de marcas",
-		image: "/menu/beer.webp"
+		image: "/drinks/cerve.webp"
 	},
 	{
 		name: "Malteada de Chocolate",
 		price: 5.99,
 		description: "Cremosa y deliciosa",
-		image: "/menu/milkshake-chocolate.webp"
+		image: "/drinks/chocola.webp"
 	},
 	{
 		name: "Malteada de Vainilla",
 		price: 5.99,
 		description: "Suave y cremosa",
-		image: "/menu/milkshake-vanilla.webp"
+		image: "/drinks/vaini.webp"
 	},
 	{
 		name: "Café Americano",
 		price: 2.99,
 		description: "Café recién hecho",
-		image: "/menu/coffee.webp"
+		image: "/drinks/cafe.webp"
 	}
 ];
 
@@ -179,60 +144,60 @@ export const desserts = [
 		name: "Brownie con Helado",
 		price: 6.99,
 		description: "Caliente con helado de vainilla",
-		image: "/menu/brownie.webp"
+		image: "/desserts/brownie.webp"
 	},
 	{
 		name: "Cheesecake",
 		price: 5.99,
 		description: "Con salsa de frutos rojos",
-		image: "/menu/cheesecake.webp"
+		image: "/desserts/chesse.webp"
 	},
 	{
 		name: "Helado Sundae",
 		price: 4.99,
 		description: "3 bolas con toppings",
-		image: "/menu/sundae.webp"
+		image: "/desserts/sunda.webp"
 	},
 	{
 		name: "Tarta de Manzana",
 		price: 5.99,
 		description: "Caliente con canela",
-		image: "/menu/apple-pie.webp"
+		image: "/desserts/manzana.webp"
 	},
 	{
 		name: "Cookies",
 		price: 3.99,
 		description: "3 galletas con chispas de chocolate",
-		image: "/menu/cookies.webp"
+		image: "/desserts/coki.webp"
 	},
 	{
 		name: "Flan",
 		price: 4.99,
 		description: "Casero con caramelo",
-		image: "/menu/flan.webp"
+		image: "/desserts/flan.webp"
 	},
 	{
 		name: "Tiramisú",
 		price: 6.99,
 		description: "Clásico postre italiano",
-		image: "/menu/tiramisu.webp"
+		image: "/desserts/tira.webp"
 	},
 	{
 		name: "Mousse de Chocolate",
 		price: 5.99,
 		description: "Suave y cremoso",
-		image: "/menu/mousse.webp"
+		image: "/desserts/mousse.webp"
 	},
 	{
 		name: "Banana Split",
 		price: 7.99,
 		description: "Con 3 sabores de helado",
-		image: "/menu/banana-split.webp"
+		image: "/desserts/bana.webp"
 	},
 	{
 		name: "Crepe de Nutella",
 		price: 6.99,
 		description: "Con fresas y crema batida",
-		image: "/menu/crepe.webp"
+		image: "/desserts/crepe.webp"
 	}
 ];
